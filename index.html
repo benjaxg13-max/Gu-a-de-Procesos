@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Procesos Institucionales</title>
+    <title>Sistema de Procesos Institucionales - UFRO</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome / Lucide Icons -->
@@ -91,11 +91,11 @@
         <aside id="sidebar" class="w-72 bg-slate-900 text-slate-300 flex flex-col border-r border-slate-800 shrink-0 transition-all duration-300 z-20">
             <div class="p-5 border-b border-slate-800 flex items-center justify-between">
                 <div class="flex items-center space-x-3">
-                    <div id="sidebar-icon-bg" class="bg-blue-600 text-white p-2.5 rounded-xl shadow-md flex items-center justify-center">
-                        <i id="sidebar-icon" class="fa-solid fa-network-wired text-xl"></i>
+                    <div id="sidebar-icon-bg" class="bg-blue-600 text-white p-1 rounded-xl shadow-md flex items-center justify-center w-11 h-11 shrink-0 overflow-hidden bg-slate-950 border border-slate-700">
+                        <img src="image_1a8e01.png" alt="Logotipo UFRO" class="w-full h-full object-contain filter invert">
                     </div>
                     <div>
-                        <h1 class="font-bold text-white text-base tracking-tight">ProcesosFlow</h1>
+                        <h1 class="font-bold text-white text-base tracking-tight">UFRO Procesos</h1>
                         <p id="role-subtitle" class="text-xs text-slate-400">Portal de Trabajadores</p>
                     </div>
                 </div>
@@ -145,7 +145,7 @@
 
                 <!-- ACCESO PROGRAMADOR SUTIL Y DISCRETO EN EL PIE DE LA BARRA LATERAL -->
                 <div class="pt-4 border-t border-slate-800 flex items-center justify-between text-xs text-slate-500">
-                    <span>Institucional v2.7</span>
+                    <span>UFRO v2.7</span>
                     <button onclick="showDevLoginModal()" title="Acceso Avanzado" class="text-slate-600 hover:text-slate-400 dark:text-slate-600 dark:hover:text-slate-300 p-1 rounded transition-colors">
                         <i class="fa-solid fa-code text-[11px]"></i>
                     </button>
@@ -689,8 +689,6 @@
             const subTitle = document.getElementById('role-subtitle');
             const newBtn = document.getElementById('header-new-btn');
             const devTools = document.getElementById('dev-quick-tools');
-            const sidebarIconBg = document.getElementById('sidebar-icon-bg');
-            const sidebarIcon = document.getElementById('sidebar-icon');
             const navLinks = document.getElementById('sidebar-nav-links');
 
             if(currentRole === 'developer') {
@@ -698,8 +696,6 @@
                 newBtn.classList.remove('hidden');
                 newBtn.classList.add('flex');
                 devTools.classList.remove('hidden');
-                sidebarIconBg.className = 'bg-amber-600 text-white p-2.5 rounded-xl shadow-md flex items-center justify-center';
-                sidebarIcon.className = 'fa-solid fa-code text-xl';
 
                 navLinks.innerHTML = `
                     <button onclick="switchTab('catalog')" id="nav-catalog" class="w-full flex items-center space-x-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all bg-amber-600 text-white shadow-sm">
@@ -724,8 +720,6 @@
                 newBtn.classList.add('hidden');
                 newBtn.classList.remove('flex');
                 devTools.classList.add('hidden');
-                sidebarIconBg.className = 'bg-blue-600 text-white p-2.5 rounded-xl shadow-md flex items-center justify-center';
-                sidebarIcon.className = 'fa-solid fa-network-wired text-xl';
 
                 navLinks.innerHTML = `
                     <button onclick="switchTab('catalog')" id="nav-catalog" class="w-full flex items-center space-x-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all bg-blue-600 text-white shadow-sm">
